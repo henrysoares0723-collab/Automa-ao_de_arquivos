@@ -1,4 +1,5 @@
 import os
+import pandas as pd 
 
 lista_arquivos = os.listdir("Curso Básico de Python/Curso Básico de Python/Vendas")
 print(lista_arquivos)
