@@ -2,13 +2,13 @@ import os
 import pandas as pd
 import plotly.express as px
 
-lista_arquivos = os.listdir("Curso Básico de Python/Curso Básico de Python/Vendas")
+lista_arquivos = os.listdir("Vendas")
 
 tabela_total = pd.DataFrame()
 
 for arquivo in lista_arquivos:
     if "Vendas" in arquivo:
-        tabela = pd.read_csv(f"Curso Básico de Python/Curso Básico de Python/Vendas/{arquivo}")
+        tabela = pd.read_csv(f"Vendas/{arquivo}")
         tabela_total = pd.concat([tabela_total, tabela])
 
 tabela_produtos = tabela_total.groupby("Produto").sum()
